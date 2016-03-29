@@ -11,3 +11,12 @@ before_script:
 script:
   - "export DISPLAY=:99.0"
   - mvn -DDISPLAY=:99.0 test
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "lt/h8byJOLgV4ezveXukF8ZiuVjpwVwWH3MMCD7fYMngbKBNEKhDHQlIv1WHDc9lcnrYI6b4LMGJzs58SanHtK6mmssCfOvwjOGDStEvqBmR5AikNwBVGS1suNLBhqiCMyAapODzFpWTvvBI+KBd5GnaDi6S9iqhqX/imnT6u3JdQrX86ubEsJ10+FAIlKe4D2qK4W02tSuswIz/1wg+k8b1xVjVxZbb8h6Jld7xVDwjvEBxlnFZn/HCIVW1LDwKOiSfg/Kc3/7jPSOSOCMAtsbi8hCXGHMQk4peiGiK223iMeLfw55Ex6n37T/FM+f8sGTRVvGYP/80gQ7zLT35zt5oBWxz1qJADr0QY1k+J6d9RyGnNie57SAVOiBfMYKVRj5lTsj0mtYL4xDM7caj4LD3clyRKQGrozrK9utTs8287451+HMhtAT/W/ox666xUI+namHuM3MIqsIVGh/mpRCU+GP1AHIXWm/2RwYadPWip58nI/CICIAdUuqUdsrrYD3mlf9OvQh5lIeDz4W9zZLP/WMGhO6P7/GBLwb8HaLVNL0JOTe5v7bZQTaGOL6yRAsdT2AhDeFq45YkieZK1bh8JCNeeh6vYF5jIOr4BjhGUTLTC7AonMUMDupXgLGfCDI5V3qwo4qzXwEq0f3BX+TGGvgSCe/q55UI4g+jpWQ="
+  file: 'target/FFtest-1.0-SNAPSHOT.jar'
+  skip_cleanup: true
+  on:
+    tags: true
