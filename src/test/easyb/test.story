@@ -8,7 +8,7 @@ description 'User can log in with valid username/password-combination'
 
 scenario "user can login with correct password", {
     given 'login selected', {
-        driver = new HtmlUnitDriver();
+        driver = new HtmlUnitDriver(true);
         driver.get("http://www.google.com");
     }
 
