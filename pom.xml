@@ -65,6 +65,9 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <systemPropertyVariables>
+                        <DISPLAY>:99.0</DISPLAY>
+                    </systemPropertyVariables>
                     <storyType>html</storyType>
                     <storyReport>${basedir}/target/easyb/easyb-report.html
                     </storyReport>
